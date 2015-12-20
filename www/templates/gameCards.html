@@ -1,0 +1,28 @@
+<!-- The title of the ion-view will be shown on the navbar -->
+<ion-view title="Memory Game" ng-controller="GameCtrl">
+
+  <ion-content class="padding">
+      <div class="game-menu">
+        <div class="game-menu-item"> 
+
+
+          <div class="list card">
+
+          <a class="item item-avatar" ng-class="{'game-cards-selected': gameCards == 'm2'}" ng-click="setGameCards('m2')">
+            <img src="img/m2/a.png">
+            <h2  style="font-size: 14px;" >Color Game</h2>
+            <p  style="font-size: 12px;"> Credits: <strong> Aquarelah </strong></p>
+          </a>
+ 
+
+          <a class="item item-avatar" ng-class="{'game-cards-selected': gameCards == 'm3'}" ng-click="setGameCards('m3')">
+            <img src="img/m3/a.png">
+            <h2  style="font-size: 14px;" >Star Wards Characters</h2>
+            <p  style="font-size: 12px;"> Credits: <strong> Joe Wight </strong></p>
+          </a>
+
+        </div>
+ 
+      </div>
+  </ion-content>
+</ion-view>

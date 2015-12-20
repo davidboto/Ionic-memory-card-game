@@ -1,0 +1,18 @@
+<!-- The title of the ion-view will be shown on the navbar -->
+<ion-view title="Memory Game" ng-controller="GameCtrl">
+
+  <ion-content class="padding">
+      <div class="game-menu">
+        <div class="game-menu-item"> 
+          <button class="button button-block button-balanced" ng-class="{'activated': numPairs == '8'}" ng-click="setNumberPairs(8)"> 8 Pairs </button>
+      
+        </div>
+        <div class="game-menu-item">
+          <button class="button button-block button-balanced" ng-class="{'activated': numPairs == '10'}" ng-click="setNumberPairs(10)"> 10 Pairs </button>
+        </div>
+        <div class="game-menu-item">
+          <button class="button button-block button-balanced" ng-class="{'activated': numPairs == '15'}" ng-click="setNumberPairs(15)"> 15 Pairs </button>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

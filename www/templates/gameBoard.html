@@ -1,0 +1,26 @@
+<!-- The title of the ion-view will be shown on the navbar -->
+<ion-view title="Memory Game" ng-controller="GameCtrl">
+
+  <ion-content class="padding">
+     <!-- <div>Pairs left to match: {{game.unmatchedPairs}}</div>
+      <div>Matching: {{game.firstPick.title}}</div> -->
+      <div class="message">{{game.message}}</div>
+      <table style="margin: auto;">
+        <tr ng-repeat="row in game.grid">
+          <td ng-repeat="tile in row" ng-click="game.flipTile(tile)" class="activated">
+
+            <!-- this entire block can be replaced with our custom component mgCard:
+              <mg-card tile="tile"></mg-card>
+            -->
+            <div class="container" style="width: {{cardSize}}px; height: {{cardSize}}px;">
+              <div class="carde" ng-class="{flipped: tile.flipped}" >
+                  <img class="front" ng-src="img/back.png">
+                  <img class="front" ng-src="img/{{gameCards}}/{{tile.title}}.png">
+              </div>
+            </div>
+
+          </td>
+        </tr>
+      </table>
+  </ion-content>
+</ion-view>
